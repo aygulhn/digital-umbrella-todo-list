@@ -3,13 +3,13 @@ export const taskListDefault = [
     id: 1,
     tags: ["Oracle", "MySQL"],
     subject: "DataBase",
-    isComplited: false,
+    isCompleted: false,
   },
   {
     id: 2,
     tags: ["React", "Vue", "Angular"],
     subject: "JS",
-    isComplited: true,
+    isCompleted: true,
   },
 ];
 

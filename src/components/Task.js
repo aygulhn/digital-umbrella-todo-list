@@ -14,7 +14,7 @@ const Task = ({ task, editTask, deleteTask, changeStatus }) => (
     <Row style={{marginTop: '10px'}}>
       <Col span={8}>
         <Checkbox
-          checked={task.isComplited}
+          checked={task.isCompleted}
           onChange={(e) => changeStatus(e.target.checked, task)}
         >
           Completed

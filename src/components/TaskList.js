@@ -42,9 +42,9 @@ const TaskList = () => {
     updateTaskList(newTaskList);
   };
 
-  const changeStatus = (isComplited, currentTask) => {
+  const changeStatus = (isCompleted, currentTask) => {
     const newTaskList = taskList.map((t) =>
-      t.id === currentTask.id ? { ...t, isComplited } : t
+      t.id === currentTask.id ? { ...t, isCompleted } : t
     );
     updateTaskList(newTaskList);
   };

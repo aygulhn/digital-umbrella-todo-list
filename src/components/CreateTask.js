@@ -12,7 +12,7 @@ const CreateTask = () => {
   const createTask = (taskFields) => {
     const newTask = {
       ...taskFields,
-      isComplited: false,
+      isCompleted: false,
       id: Math.floor(Math.random() * 100),
     };
     const storageTaskList = JSON.parse(localStorage.getItem("taskList"));
