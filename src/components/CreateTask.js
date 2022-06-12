@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Button, Card, Form, Row, Col } from "antd";
 import TaskForm from "./TaskForm";
 
-const CreateTask = ({ task }) => {
-  const newTask = task ? task : { tags: [], subject: "" };
+const CreateTask = () => {
+  const newTask = { tags: [], subject: "" };
   const [form] = Form.useForm();
 
   let navigate = useNavigate();

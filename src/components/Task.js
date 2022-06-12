@@ -6,7 +6,7 @@ const Task = ({ task, editTask, deleteTask, changeStatus }) => (
   <Card type="inner" title={task.subject}>
     <Row>
       <Col span={24}>
-        {task.tags.map((tag) => (
+        {task.tags?.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
         ))}
       </Col>

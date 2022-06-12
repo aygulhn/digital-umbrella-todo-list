@@ -9,7 +9,7 @@ const TaskForm = ({ task }) => {
       <Form.Item name="subject" rules={[{ required: true }]}>
         <Input placeholder="Add subject" />
       </Form.Item>
-      <Form.Item name="tags" rules={[{ required: true }]}>
+      <Form.Item name="tags">
         <Select
           mode="multiple"
           tokenSeparators={[","]}

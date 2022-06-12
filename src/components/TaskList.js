@@ -50,14 +50,15 @@ const TaskList = () => {
   };
 
   const onSearch = (searchText) => {
-    const taskListStorage = JSON.parse(localStorage.getItem("taskList"));
+    const taskListStorage = JSON.parse(localStorage.getItem("taskList")) || [];
     if (!searchText.length) {
       setTaskList([...taskListStorage]);
       return;
     }
     const searchTaskList = taskListStorage.filter((task) =>
-      searchText.every((s) => task.tags.includes(s))
+      searchText.every((s) => task.tags?.includes(s))
     );
+
     setTaskList([...searchTaskList]);
   };
 
@@ -90,7 +91,7 @@ const TaskList = () => {
         <Row align="middle" style={{ margin: "20px" }}>
           <Button onClick={handleClick}>New Task +</Button>
         </Row>
-        {taskList.map((task) => (
+        {taskList?.map((task) => (
           <Row justify="center">
             <Col span={10} style={{ margin: "10px" }}>
               <Task
